@@ -1,0 +1,124 @@
+/*
+=========================
+Table of Contents
+    1.0 Universal
+    2.0 Navbar
+    3.0 About
+    4.0 Portfolio
+    5.0 Testimonials
+    6.0 Contact
+    7.0 Footer
+    8.0 Media Queries
+=========================
+*/
+
+/*
+=========================
+    1.0 Universal
+=========================
+*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #1F2937;
+    --blue: #3882F6;
+    --gray: #E5E7EB;
+    --white: #F9FAF8;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+=========================
+    2.0 Navbar
+=========================
+*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    background-color: var(--navy);
+    top: 0;
+    left: 0;
+    padding: 0 1em 0 2em;
+    z-index: 1;
+}
+
+.navlogo {
+    display: flex;
+    height: 8vh;
+}
+
+.logo-img {
+    display: flex;
+    width: 16vh;
+}
+
+.logo-writing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: "Brush Script MT", cursive;
+    color: var(--white);
+    padding-left: .5em;
+}
+
+.navlist ul {
+    display: flex;
+    padding: 0 1em;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 1.8rem;
+    letter-spacing: .18em;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav a:hover {
+    color: var(--blue); 
+}
+
+/*
+=========================
+    3.0 About
+=========================
+*/
+
+/*
+=========================
+    8.0 Media Queries
+=========================
+*/
+
+@media only screen and (max-width: 976px) {
+  .navlist {
+      display: none;
+  }
+  .navbar {
+      justify-content: center;
+  }
+  .logo-writing {
+      padding-left: 1em;
+  }
+}
