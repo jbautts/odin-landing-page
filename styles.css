@@ -1,10 +1,10 @@
 /*
 =========================
 Table of Contents
-    1.0 Universal
+    1.0 Global
     2.0 Navbar
     3.0 About
-    4.0 Portfolio
+    4.0 Sessions
     5.0 Testimonials
     6.0 Contact
     7.0 Footer
@@ -14,7 +14,7 @@ Table of Contents
 
 /*
 =========================
-    1.0 Universal
+    1.0 Global
 =========================
 */
 
@@ -111,14 +111,41 @@ nav a:hover {
 =========================
 */
 
-@media only screen and (max-width: 976px) {
-  .navlist {
-      display: none;
+@media all and (max-width: 976px) {
+  .navlist ul {
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 4vh;
+      margin: 0;
+      padding: 0;
+  }
+  .navlist li {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: .16em;
   }
   .navbar {
-      justify-content: center;
+    flex-wrap: wrap;
+    height: 10vh;
+    padding: 0;
+    margin: 0;
+  }
+  .navlogo {
+    justify-content: center;
+    height: 5vh;
+    width: 100vw;
+  }
+  .logo-img  {
+    justify-content: flex-end;
   }
   .logo-writing {
-      padding-left: 1em;
+    justify-content: center;
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
   }
 }
