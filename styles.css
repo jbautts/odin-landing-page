@@ -39,6 +39,10 @@ html {
     padding: 0;
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     font-size: 4rem;
     color: var(--white);
@@ -59,14 +63,14 @@ a {
     font-size: 1.5rem;
     font-weight: bolder;
     padding: .5em;
+    border-radius: .3em;
     color: var(--white);
     background-color: var(--blue);
-    border-radius: .2em;
-    transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-    box-shadow: 0 .25em .75em rgba(56, 130, 246, .4);
+    color: var(--blue);
+    background-color: var(--white);
 }
 
 /*
@@ -143,7 +147,7 @@ nav a:hover {
     width: 100%;
     z-index: 0;
     padding-top: 10vh;
-    background-image: linear-gradient(to bottom, rgba(24, 32, 44, 0.6), rgba(31, 41, 55, .8)), url('about-background.jpg');
+    background-image: linear-gradient(to bottom, rgba(24, 32, 44, .6), rgba(31, 41, 55, .8)), url('about-background.jpg');
     background-size: cover;
 }
 
@@ -171,22 +175,80 @@ iframe{
 
 /*
 =========================
+    5.0 Testimonials
+=========================
+*/
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh;
+    color: var(--navy);
+    background-image: linear-gradient(to bottom, rgba(183, 184, 188, .6), rgba(231, 233, 237, .8)), url(testimonials-background.jpg);
+    background-size: cover;
+    padding-top: 2.5em;
+}
+
+.quote-box {
+    width: 64%;
+    padding-bottom: 2.5em;
+}
+
+.quote-box p {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--navy);
+    margin: 0 0 .2em 0;
+}
+
+.quote-box span  {
+    display: block;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: right;
+    margin: 0;
+}
+
+/*
+=========================
+    7.0 Footer
+=========================
+*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.footer {
+    font-size: 1.2rem;
+}
+
+/*
+=========================
     8.0 Media Queries
 =========================
 */
 
 @media all and (max-width: 976px) {
   .navlist ul {
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
       width: 100vw;
       height: 4vh;
       margin: 0;
-      padding: 0;
+      padding: 0 .5em;
   }
   .navlist li {
     display: flex;
-    flex: 1;
+    flex: 1 1 auto;
     justify-content: center;
     padding: 0;
     margin: 0;
@@ -203,21 +265,29 @@ iframe{
     justify-content: center;
     height: 5vh;
     width: 100vw;
+    padding-top: .5em;
   }
   .logo-img  {
-    justify-content: flex-end;
+    justify-content: center;
   }
   .logo-writing {
     justify-content: center;
     font-size: 2.5rem;
     letter-spacing: .15rem;
+    padding: 0;
   }
   .about {
     flex-wrap: wrap;
   }
   .about-info,
   .about-video {
-    width: 90%;
-    max-width: 90%;
+    width: 88%;
+    max-width: 88%;
+  }
+  .about-video {
+    margin-bottom: 4em;
+  }
+  .quote-box {
+      width: 88%;
   }
 }
