@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Basetball Bautts</title>
 </head>
 <body>
-    <nav id="navbar">
+    <nav class="navbar">
         <div class="navlogo">
-            <img src="basketball-logo.png" alt="basketball logo">
+            <div class="logo-img">
+                <img src="basketball-logo.png" alt="basketball logo">
+            </div>
+            <div class="logo-writing">
+                Basketball Bautts
+            </div>
         </div>
 
         <div class="navlist">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href=".about">About</a></li>
+                <li><a href=".sessions">Sessions</a></li>
+                <li><a href=".testimonials">Testimonials</a></li>
+                <li><a href=".contact">Contact</a></li>
             </ul>
         </div>
     </nav>   
-     
+
+    <section class="about">
+        <div class="about-info">
+            <h1>Take your game to the next level</h1>
+            <p>Tired of scrumming at the local YMCA? Then this is the place for you! Utilizing the latest in basketball technology and technique, Basketball Bautts offers state-of-the-art training and coaching sessions that are gauranteed to transform your skills all the way to the top.</p>
+            <a class="btn" href="">Sign up</a>
+        </div>
+
+        <div class="about-video">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/aYrmKlAR0g0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
 </body>
 </html>
