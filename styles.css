@@ -53,8 +53,8 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    line-height: 1;
-    margin: 0;
+    line-height: 1.1;
+    margin: 0 0 .1em 0;
 }
 
 h3 {
@@ -204,8 +204,9 @@ iframe{
     background-color: var(--white);
 }
 
-#sessions h2 {
+.session-title {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 15vh;
@@ -306,6 +307,10 @@ iframe{
     margin-right: 8%;
 }
 
+.contact-info p {
+    margin: .5em 0;
+}
+
 .contact-btn .btn {
     display: flex;
     text-align: center;
@@ -392,7 +397,7 @@ footer {
   .about-video {
     margin-bottom: 4em;
   }
-  #sessions h2 {
+  .session-title {
     width: 90%;
 }
   .session-wrap {
