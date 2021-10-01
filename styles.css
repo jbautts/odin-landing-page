@@ -381,7 +381,8 @@ footer {
   }
   .logo-img  {
     justify-content: center;
-    max-width: 12vw;
+    max-width: 20vw;
+    border: 2px solid red;
   }
   .logo-writing {
     justify-content: center;
