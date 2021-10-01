@@ -115,7 +115,7 @@ a {
 
 .logo-img {
     display: flex;
-    max-width: 16vh;
+    max-width: 6vw;
 }
 
 .logo-writing {
@@ -125,7 +125,7 @@ a {
     font-size: 4rem;
     font-family: "Brush Script MT", cursive;
     color: var(--white);
-    padding-left: .5em;
+    margin-left: 1em;
 }
 
 .navlist ul {
@@ -347,7 +347,7 @@ footer {
 */
 
 @media all and (max-width: 1000px) {
-  .h2 {
+  h2 {
     margin: .5em 0;
   }
     .navlist ul {
@@ -375,12 +375,13 @@ footer {
   }
   .navlogo {
     justify-content: center;
+    width: 100%;
     height: 5vh;
-    width: 100vw;
     padding-top: .5em;
   }
   .logo-img  {
     justify-content: center;
+    max-width: 12vw;
   }
   .logo-writing {
     justify-content: center;
