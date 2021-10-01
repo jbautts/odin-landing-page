@@ -115,7 +115,7 @@ a {
 
 .logo-img {
     display: flex;
-    width: 16vh;
+    max-width: 16vh;
 }
 
 .logo-writing {
@@ -222,7 +222,7 @@ iframe{
 .session-box {
     flex-basis: 24%;
     min-height: 30vh;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: center;
     margin: 3.75vh 0;
 }
@@ -264,7 +264,6 @@ iframe{
 .quote-box p {
     font-size: 2.5rem;
     font-style: italic;
-    font-weight: lighter;
     color: var(--navy);
     margin: 0 0 .2em 0;
 }
@@ -348,7 +347,10 @@ footer {
 */
 
 @media all and (max-width: 1000px) {
-  .navlist ul {
+  .h2 {
+    margin: .5em 0;
+  }
+    .navlist ul {
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
