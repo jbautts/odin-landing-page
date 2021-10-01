@@ -37,6 +37,7 @@ html {
     letter-spacing: .18em;
     margin: 0;
     padding: 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -46,6 +47,18 @@ body {
 h1 {
     font-size: 4rem;
     color: var(--white);
+    line-height: 1.1;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
     line-height: 1;
     margin: 0;
 }
@@ -53,6 +66,7 @@ h1 {
 p {
     font-size: 1.8rem;
     color: var(--white);
+    margin: 1em 0;
 }
 
 a {
@@ -68,7 +82,8 @@ a {
     background-color: var(--blue);
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
     color: var(--blue);
     background-color: var(--white);
 }
@@ -86,7 +101,7 @@ a {
     height: 10vh;
     width: 100%;
     position: fixed;
-    background-color: var(--navy);
+    background: linear-gradient(#353E4B, #1B2431);
     top: 0;
     left: 0;
     padding: 0 1em 0 2em;
@@ -95,7 +110,7 @@ a {
 
 .navlogo {
     display: flex;
-    height: 8vh;
+    height: 7vh;
 }
 
 .logo-img {
@@ -129,7 +144,8 @@ nav a {
     color: var(--white);
 }
 
-nav a:hover {
+nav a:hover,
+nav a:active {
     color: var(--blue);
 }
 
@@ -139,7 +155,7 @@ nav a:hover {
 =========================
 */
 
-.about {
+#about {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -147,7 +163,7 @@ nav a:hover {
     width: 100%;
     z-index: 0;
     padding-top: 10vh;
-    background-image: linear-gradient(to bottom, rgba(24, 32, 44, .6), rgba(31, 41, 55, .8)), url('about-background.jpg');
+    background-image: linear-gradient(to bottom, rgba(31, 41, 55, .8), rgba(24, 32, 44, .6)), url('about-background.jpg');
     background-size: cover;
 }
 
@@ -175,18 +191,66 @@ iframe{
 
 /*
 =========================
+    4.0 Sessions
+=========================
+*/
+
+#sessions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--navy);
+    background-color: var(--white);
+}
+
+#sessions h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 15vh;
+}
+
+.session-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    min-height: 75vh;
+}
+
+.session-box {
+    flex-basis: 24%;
+    min-height: 30vh;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 3.75vh 0;
+}
+
+.session-box img {
+    width: 100%;
+    border: .15em solid var(--navy);
+}
+
+.fig-title {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+
+/*
+=========================
     5.0 Testimonials
 =========================
 */
 
-.testimonials {
+#testimonials {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     min-height: 50vh;
     color: var(--navy);
-    background-image: linear-gradient(to bottom, rgba(183, 184, 188, .6), rgba(231, 233, 237, .8)), url(testimonials-background.jpg);
+    background-image: linear-gradient(to bottom, rgba(231, 233, 237, .8), rgba(183, 184, 188, .6)), url(testimonials-background.jpg);
     background-size: cover;
     padding-top: 2.5em;
 }
@@ -214,6 +278,46 @@ iframe{
 
 /*
 =========================
+    6.0 Contact
+=========================
+*/
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 32vh;
+    color: var(--white);
+    background-color: var(--white);
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 64%;
+    padding: 2em 9%;
+    border-radius: .4em;
+    background-color: var(--blue);
+}
+
+.contact-info {
+    max-width: 74%;
+    margin-right: 8%;
+}
+
+.contact-btn .btn {
+    display: flex;
+    text-align: center;
+    border: .1em solid var(--white);
+}
+
+.contact p {
+    margin: .5em 0;
+}
+
+/*
+=========================
     7.0 Footer
 =========================
 */
@@ -222,9 +326,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 8vh;
     color: var(--white);
-    background-color: var(--navy);
+    background: linear-gradient(#353E4B, #1B2431);
 }
 
 .footer {
@@ -237,14 +342,14 @@ footer {
 =========================
 */
 
-@media all and (max-width: 976px) {
+@media all and (max-width: 1000px) {
   .navlist ul {
-      justify-content: space-evenly;
-      align-items: center;
-      width: 100vw;
-      height: 4vh;
-      margin: 0;
-      padding: 0 .5em;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 4vh;
+    margin: 0;
+    padding: 0 .5em;
   }
   .navlist li {
     display: flex;
@@ -276,18 +381,38 @@ footer {
     letter-spacing: .15rem;
     padding: 0;
   }
-  .about {
+  #about {
     flex-wrap: wrap;
   }
   .about-info,
   .about-video {
-    width: 88%;
-    max-width: 88%;
+    width: 90%;
+    max-width: 90%;
   }
   .about-video {
     margin-bottom: 4em;
   }
-  .quote-box {
-      width: 88%;
+  #sessions h2 {
+    width: 90%;
+}
+  .session-wrap {
+    flex-wrap: wrap;
+    padding-bottom: 1em;
   }
+  .session-box {
+    flex-basis: 75%;
+    margin: 0;
+  }
+  .quote-box {
+    width: 90%;
+  }
+  .contact-box {
+    width: 90%;
+  }
+  .contact-info {
+    max-width: 75%;
+}
+  .footer {
+    max-width: 90%;
+    }
 }
