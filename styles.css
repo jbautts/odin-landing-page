@@ -427,6 +427,12 @@ footer {
   .quote-box {
     width: 90%;
   }
+  .quote-box p {
+    font-size: 2rem;
+}
+  .quote-box span  {
+    font-size: 1.7rem;
+}
   #contact {
     min-height: 30vh;
   }
