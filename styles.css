@@ -442,6 +442,9 @@ footer {
   .contact-info {
     max-width: 75%;
 }
+  footer {
+    height: 10vh;
+  }
   .footer {
     max-width: 90%;
     }
