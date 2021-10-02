@@ -182,6 +182,20 @@ nav a:active {
     position: relative;
 }
 
+@supports not (aspect-ratio: 16 / 9) {
+    .about-video::before {
+      float: left;
+      padding-top: 56.25%;
+      content: "";
+    }
+  
+    .about-video::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
 iframe{
     position: absolute;
     top: 0;
@@ -377,10 +391,6 @@ footer {
     max-height: 5vh;
     padding-top: 1em;
   }
-  .logo-img img  {
-    justify-content: center;
-    max-height: 5vh;
-  }
   .logo-writing {
     justify-content: center;
     font-size: 2.5rem;
@@ -416,7 +426,7 @@ footer {
     width: 90%;
   }
   #contact {
-    min-height: 28vh;
+    min-height: 30vh;
   }
   .contact-box {
     width: 90%;
